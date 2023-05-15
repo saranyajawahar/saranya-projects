@@ -1,0 +1,25 @@
+Import pandas as pd
+Dataset = pd.read_csv(“FILENAME.csv”)
+Print (dataset)
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.scatter(dataset['CSV DATA NAME'],dataset[' CSV DATA NAME '])
+x = dataset[['CSV DATA NAME ']]
+y = dataset['CSV DATA NAME ']
+x
+y
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=10)
+len(x_train)
+x_train
+x_test
+from sklearn.neighbors import KneighborsClassifier
+#Linear regression (from sklearn.linear regression import Biasian linear regression)
+#Logiatic regression (from sklearn.logistic regression import Biasian logistic regression)
+#XGBoost(from sklearn.xgboost import Gradient boost frame work)
+#k means (from scikit-learn import k means clustering)
+clf = KNeighborsClassifier()
+clf.fit(x_train, y_train)
+clf.predict(x_test)
+y_test
+clf.score(x_test,y_test)
